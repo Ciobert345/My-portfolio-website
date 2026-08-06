@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+@layer base {
+  :root {
+    --bg-nordic: #F5F1E8;
+    --card-nordic: #FFFFFF;
+    --card-alt-nordic: #FAF6EE;
+    --text-nordic: #2B2822;
+    --accent-nordic: #C97B4A;
+    --border-nordic: #E6DFD3;
+  }
+
+  .dark {
+    --bg-nordic: #1B1F23;
+    --card-nordic: #242A30;
+    --card-alt-nordic: #1E2328;
+    --text-nordic: #E8E6E1;
+    --accent-nordic: #E0955F;
+    --border-nordic: #323A44;
+  }
+
+  /* Blocco Anti-Overflow Globale */
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-nordic);
+    color: var(--text-nordic);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Utility per nascondere la scrollbar nei filtri scorrevoli su Mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Organic irregular geometric profile frame blob shape */
+.organic-blob-frame {
+  border-radius: 42% 58% 65% 35% / 45% 42% 58% 55%;
+  transition: border-radius 8s ease-in-out infinite alternate;
+}
+
+.organic-blob-frame:hover {
+  border-radius: 58% 42% 38% 62% / 52% 60% 40% 48%;
+}
+
+/* CRT Scanline Effect */
+.crt-scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.25)
+  );
+  background-size: 100% 4px;
+}
+
+/* CRT Screen Glow Effects */
+.crt-glow-amber {
+  text-shadow: 0 0 4px rgba(255, 176, 0, 0.6), 0 0 10px rgba(255, 176, 0, 0.3);
+}
+
+.crt-glow-green {
+  text-shadow: 0 0 4px rgba(51, 255, 51, 0.6), 0 0 10px rgba(51, 255, 51, 0.3);
+}
+
+.crt-glow-cyan {
+  text-shadow: 0 0 4px rgba(0, 255, 255, 0.6), 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Custom Scrollbar for Bento and CRT */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.5);
+}
